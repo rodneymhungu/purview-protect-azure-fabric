@@ -1,0 +1,3 @@
+# Azure SQL + Fabric Labeling Test
+
+Scenario walkthrough...
