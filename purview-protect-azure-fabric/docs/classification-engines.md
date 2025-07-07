@@ -58,3 +58,18 @@ Meanwhile, a Power BI report connected to that table could be:
 | Build data products in Purview Unified Catalog | **Data Map** |
 
 Both engines can drive labeling, but understanding their differences ensures you're using the right tool for the right layer of your data estate.
+
+## ✅ Summary
+
+| Use Case | Recommended Engine |
+|----------|---------------------|
+| Classify Azure SQL or Blob | **Data Map** |
+| Apply DLP in Teams or SharePoint | **SITs** |
+| Auto-label in Office apps | **SITs** |
+| Build Data Products | **Data Map** |
+
+**Documentation:**
+- 🔹 [Data Map Classification](https://learn.microsoft.com/en-us/purview/data-map-classification)
+- 🔹 [Sensitive Information Types](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitive-information-type-learn-about)
+- 🔹 [Auto-labeling in Microsoft 365](https://learn.microsoft.com/en-us/microsoft-365/compliance/create-automated-sensitivity-label-policies)
+- 🔹 [Unified Catalog – Data Products](https://learn.microsoft.com/en-us/purview/unified-catalog-data-products)
