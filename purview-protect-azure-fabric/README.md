@@ -2,7 +2,7 @@
 
 ## 🧭 Overview
 
-This repo demonstrates how to protect and govern data across Azure and Microsoft Fabric using **Microsoft Purview Information Protection**. It includes tested examples, scripts, and documentation based on real-world implementation.
+This repo demonstrates how to protect and govern data across Azure and Microsoft Fabric using **Microsoft Purview**. It includes tested examples, scripts, and documentation based on demployment live test environments.
 
 With this repo, you’ll learn how to:
 
