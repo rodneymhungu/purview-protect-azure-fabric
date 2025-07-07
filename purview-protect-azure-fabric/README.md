@@ -1,4 +1,4 @@
-# Purview + Fabric: Protecting Data in Azure
+# Purview: Protecting Data in Azure & Fabric
 
 ## 🧭 Overview
 Microsoft Purview offers a product suite that allows data classification, sensitivity labeling, and governance across Azure PaaS, Microsoft Fabric, and Microsoft 365.
