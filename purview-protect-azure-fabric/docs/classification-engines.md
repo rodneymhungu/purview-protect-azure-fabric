@@ -8,7 +8,7 @@ In Microsoft Purview, classification is a foundational step toward applying sens
 
 | Feature | **Purview Data Map Classification** | **Sensitive Information Types (SITs)** |
 |--------|--------------------------------------|----------------------------------------|
-| **Applies To** | Azure IaaS/PaaS data sources (e.g., Azure SQL, ADLS, Fabric) | Microsoft 365 apps and SaaS (e.g., Exchange, Teams, SharePoint, Box) |
+| **Applies To** | Azure IaaS/PaaS data sources (e.g., Azure SQL, ADLS, Azure Blob Storage) | Microsoft 365 apps and SaaS (e.g., Exchange, Teams, SharePoint, Box, Fabric) |
 | **Purpose** | Discover, classify, and tag structured/unstructured data assets in Azure | Identify sensitive content (e.g., credit cards, SSNs) within documents, emails, chats |
 | **Examples** | Scan an Azure SQL database for IBANs and apply a label to the asset | Detect a credit card number in an Excel file or Teams chat message |
 | **Label Action** | Applies label metadata to the data asset (for cataloging, not encryption) | Applies label and optionally enforces protection (e.g., encryption, DLP) |
