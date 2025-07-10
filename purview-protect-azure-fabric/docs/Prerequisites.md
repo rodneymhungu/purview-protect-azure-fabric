@@ -1,6 +1,6 @@
 # Prerequisites 
 
-Work in Progress 10 July 2025 - do not use until fully reviewed! - comments are welcome in the meantime!
+_**Work in Progress as of 10 July 2025 - do not use until fully reviewed and tested with others! - reach out to me for comments in the meantime!**_
 
 To test Microsoft Purview, Fabric, and Azure classification and protection features in one day, follow this checklist to ensure you have the right setup.
 
@@ -35,7 +35,7 @@ To test Microsoft Purview, Fabric, and Azure classification and protection featu
 
 | Product Area       | Role/Permission Needed                         | Description |
 |--------------------|--------------------------------------------------|-------------|
-| **Microsoft Purview** | **Purview Administrator** or **Data Curator** | Allows you to scan, classify, label, and publish data. Assign in the Purview Studio or Azure Portal. |
+| **Microsoft Purview** | **Purview Administrator** or **Data Curator** | Allows you to use Microsoft Purview Information Protection including Sensitivity Labels. Assign in the Purview Portal. |
 |                    | Azure Role: **Owner** or **Contributor** on the Purview account resource group | Required to create/edit scanning and labeling policies. |
 | **Azure Storage / SQL** | **Storage Blob Data Reader/Contributor** | Needed to scan and classify Blob containers and SQL databases. |
 |                    | **Owner** on Azure resource group (recommended for testing) | Gives full control to configure integration and labels. |
