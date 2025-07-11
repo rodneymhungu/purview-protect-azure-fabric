@@ -60,9 +60,22 @@ To test Microsoft Purview, Fabric, and Azure classification and protection featu
 
 ## 🔄 Other Setup Steps
 
-- **Enable Microsoft Purview Governance Portal**  
-  [https://web.purview.azure.com](https://web.purview.azure.com)  
-  Create a new Purview account or use an existing one.
+- **Access the Microsoft Purview Portal**  
+  [Go to Microsoft Purview Portal](https://purview.microsoft.com)  
+  This is the modern portal for Microsoft Purview governance and security.  
+  Do not use [https://web.purview.azure.com](https://web.purview.azure.com) — this is the legacy portal and no longer recommended.
+
+- **Verify Enterprise Version of Microsoft Purview**  
+  Check your account type at: [https://purview.microsoft.com/settings/account](https://purview.microsoft.com/settings/account)  
+  Learn how to upgrade to Enterprise: [Microsoft Learn Guide](https://learn.microsoft.com/en-us/purview/data-governance-free-version-upgrade-to-enterprise)  
+  Make sure your account is using the Enterprise version to access classification, scanning, and sensitivity labeling features.
+
+- **Ensure Azure Integration**  
+  Confirm that your Microsoft Purview account is connected to:
+  - The Azure subscription you created earlier
+  - A valid resource group with appropriate permissions  
+  Documentation: [Create a Microsoft Purview account](https://learn.microsoft.com/en-us/azure/purview/create-purview-account)
+
 
 - **Enable Microsoft Purview Information Protection**  
   Go to [Microsoft Purview Compliance Portal](https://compliance.microsoft.com/)  
