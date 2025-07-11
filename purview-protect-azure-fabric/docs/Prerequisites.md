@@ -4,7 +4,7 @@ _**Work in Progress as of 10 July 2025 - do not use until fully reviewed and tes
 
 To test Microsoft Purview, Fabric, and Azure classification and protection features in one day, follow this checklist to ensure you have the right setup.
 
-## ✅ Core Setup Requirements
+## ✅Core Setup Requirements
 
 1. **Microsoft Entra ID Tenant (formerly Azure AD)**
    - You need access to a **Microsoft Entra ID tenant**, which acts as your organization’s identity and access management platform.
@@ -68,14 +68,9 @@ To test Microsoft Purview, Fabric, and Azure classification and protection featu
 - **Verify Enterprise Version of Microsoft Purview**  
   Check your account type at: [https://purview.microsoft.com/settings/account](https://purview.microsoft.com/settings/account)  
   Learn how to upgrade to Enterprise: [Microsoft Learn Guide](https://learn.microsoft.com/en-us/purview/data-governance-free-version-upgrade-to-enterprise)  
-  Make sure your account is using the Enterprise version to access classification, scanning, and sensitivity labeling features.
+  Make sure your account is using the Enterprise version to access multicloud classification, scanning, and sensitivity labeling features.
 
-- **Ensure Azure Integration**  
-  Confirm that your Microsoft Purview account is connected to:
-  - The Azure subscription you created earlier
-  - A valid resource group with appropriate permissions  
-  Documentation: [Create a Microsoft Purview account](https://learn.microsoft.com/en-us/azure/purview/create-purview-account)
-
+  ![Example screenshot: Microsoft Purview Enterprise Account](images/purview-enterprise-account.png)
 
 - **Enable Microsoft Purview Information Protection**  
   Go to [Microsoft Purview Compliance Portal](https://compliance.microsoft.com/)  
@@ -89,6 +84,9 @@ To test Microsoft Purview, Fabric, and Azure classification and protection featu
 
 - **Connect Fabric to a labeled Azure data source**  
   In Fabric, create a Lakehouse or semantic model using a source that was labeled by Purview. Check whether labels flow through.
+
+- **Ensure Audit Premium is turned on**  
+  This section is to be completed
 
 ---
 
