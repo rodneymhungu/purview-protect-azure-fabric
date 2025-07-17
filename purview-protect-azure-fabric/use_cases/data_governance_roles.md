@@ -1,3 +1,0 @@
-# Roles in Data Governance
-
-Responsibilities and flows...
