@@ -19,10 +19,9 @@ To test Microsoft Purview, Fabric, and Azure classification and protection featu
 
 
 3. **Microsoft 365 E5 License**
-   - You need a license that includes:
+   - You need a the E5 license, which includes [Microsoft 365 bundle of apps and products](https://m365maps.com) and the following advanced data security products:
      - Microsoft Purview Information Protection
      - Microsoft Purview Data Loss Prevention
-     - Microsoft Fabric (available via Power BI Premium or a Microsoft Fabric Trial)
    - At minimum, ensure one user has a valid **Microsoft 365 E5** or **Microsoft 365 E5 Compliance** license.
    - 📘 [Compare Microsoft 365 E5 licensing options](https://www.microsoft.com/microsoft-365/compare-microsoft-365-enterprise-plans)
    - 📘 [Start a Microsoft Fabric trial](https://learn.microsoft.com/en-us/fabric/get-started/fabric-trial)
@@ -86,7 +85,7 @@ To test Microsoft Purview, Fabric, and Azure classification and protection featu
   In Fabric, create a Lakehouse or semantic model using a source that was labeled by Purview. Check whether labels flow through.
 
 - **Ensure Audit Premium is turned on**  
-  This section is to be completed
+  For most production environments using Microsoft 365 (Office) products, this already turned on. If you're using a demo or test tenant, it might not be. Instructions here: [Turn Microsoft Purview auditing on or off](https://learn.microsoft.com/en-us/purview/audit-log-enable-disable)
 
 ---
 
@@ -95,13 +94,6 @@ To test Microsoft Purview, Fabric, and Azure classification and protection featu
 - **Missing E5 License:** Without it, auto-labeling and protection will not work in Microsoft 365, Purview, or Fabric.
 - **Label Not Published to User:** Even if labels are created, users can't apply or inherit them unless a label policy is assigned to them.
 - **No Fabric Capacity Assigned:** Even with a license, you may need to explicitly enable Fabric or request access to a workspace with capacity.
-- **Lack of Azure RBAC:** Without correct role assignments in Azure (e.g., Contributor on the resource group), Purview will fail to scan or label resources.
+- **Lack of Azure RBAC:** Without correct role assignments in Azure (e.g., Contributor on the resource group), Purview will fail to scan or label data assets in Azure.
 
 ---
-
-## 🔗 Helpful Links
-
-- [Get started with Microsoft Purview](https://learn.microsoft.com/en-us/azure/purview/)
-- [Enable Microsoft Fabric](https://learn.microsoft.com/en-us/fabric/get-started/fabric-trial)
-- [Create and publish sensitivity labels](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels)
-- [Configure data scanning in Purview](https://learn.microsoft.com/en-us/azure/purview/register-scan-azure-data-source)
