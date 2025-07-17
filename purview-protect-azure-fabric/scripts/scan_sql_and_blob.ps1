@@ -1,3 +1,0 @@
-# PowerShell script to scan SQL and Blob
-
-Write actual script here...

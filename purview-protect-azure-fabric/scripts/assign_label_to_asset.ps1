@@ -1,3 +1,0 @@
-# Script for manual label assignment
-
-Insert Set-AIPFileLabel example...
