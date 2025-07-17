@@ -1,3 +1,0 @@
-# Unified Catalog Use Case
-
-Data product structuring...
