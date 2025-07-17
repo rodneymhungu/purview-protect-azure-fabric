@@ -1,3 +1,0 @@
-# Blob Storage Classification Test
-
-Use case details...
