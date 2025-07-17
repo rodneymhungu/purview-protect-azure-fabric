@@ -1,7 +1,5 @@
 # Prerequisites 
 
-_**Work in Progress as of 10 July 2025 - do not use until fully reviewed and tested with others! - reach out to me for comments in the meantime!**_
-
 To test Microsoft Purview, Fabric, and Azure classification and protection features in one day, follow this checklist to ensure you have the right setup.
 
 ## ✅Core Setup Requirements
@@ -95,5 +93,6 @@ To test Microsoft Purview, Fabric, and Azure classification and protection featu
 - **Label Not Published to User:** Even if labels are created, users can't apply or inherit them unless a label policy is assigned to them.
 - **No Fabric Capacity Assigned:** Even with a license, you may need to explicitly enable Fabric or request access to a workspace with capacity.
 - **Lack of Azure RBAC:** Without correct role assignments in Azure (e.g., Contributor on the resource group), Purview will fail to scan or label data assets in Azure.
+- **TLDR:** The formal Microsoft technical prerequisites docs are a long read, but if you're up for it, they help a lot!  - [Official deployment checklist for the Microsoft Purview Data Governance Solutions](https://learn.microsoft.com/en-us/purview/legacy/tutorial-azure-purview-checklist?source=recommendations)
 
 ---
