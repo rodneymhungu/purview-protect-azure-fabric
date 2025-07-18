@@ -20,6 +20,11 @@ Below are two example letters used in this simulation:
 > 
 > ![Debt Collection Letter](../images/debt-collection-letter.png)
 
+You can download these files in a ZIP archive for testing:
+
+**[⬇ Download dummy_data_azure_blob_storage.zip](https://github.com/rodneymhungu/purview-protect-azure-fabric/raw/main/dummy-files/dummy_data_azure_blob_storage.zip)**  
+_This ZIP contains the .docx files used in the Blob Storage classification simulation._
+
 ---
 
 ### 🔍 What’s Inside These Files
