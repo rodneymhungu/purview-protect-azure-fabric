@@ -22,7 +22,7 @@ Below are two example letters used in this simulation:
 
 You can download these files in a ZIP archive for testing:
 
-**[⬇ Download dummy_data_azure_blob_storage.zip](https://github.com/rodneymhungu/purview-protect-azure-fabric/dummy-files/dummy_data_azure_blob_storage.zip)**  
+**[⬇ Download dummy_data_azure_blob_storage.zip](https://github.com/rodneymhungu/purview-protect-azure-fabric/blob/main/purview-protect-azure-fabric/dummy-files/dummy_data_azure_blob_storage.zip)**  
 _This ZIP contains the .docx files used in the Blob Storage classification simulation._
 
 ---
