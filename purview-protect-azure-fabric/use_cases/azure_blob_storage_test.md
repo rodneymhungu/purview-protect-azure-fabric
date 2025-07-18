@@ -14,9 +14,9 @@ Below are two example letters used in this simulation:
 - `Loan_Confirmation_502312665.docx`  
 - `Debt_Collection_456055719.docx`  
 
-> _Insert screenshots here:_
+> _Loan_Confirmation_502312665:_
 > 
-> ![Loan Confirmation Letter](../images/loan-confirmation-letter.png)
+> ![Loan Confirmation Letter](../docs/images/loan-confirmation-letter.png)
 > 
 > ![Debt Collection Letter](../images/debt-collection-letter.png)
 
