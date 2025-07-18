@@ -12,12 +12,11 @@ These letters are stored as `.docx` files in **Azure Blob Storage**, with filena
 Below are two example letters used in this simulation:
 
 - `Loan_Confirmation_502312665.docx`  
-- `Debt_Collection_456055719.docx`  
 
-> _Loan_Confirmation_502312665:_
 > 
 > ![Loan Confirmation Letter](../docs/images/loan-confirmation-letter.png)
-> 
+>
+> - `Debt_Collection_456055719.docx`  
 > ![Debt Collection Letter](../images/debt-collection-letter.png)
 
 You can download these files in a ZIP archive for testing:
