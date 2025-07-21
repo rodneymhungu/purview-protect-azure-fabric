@@ -1,11 +1,11 @@
-## 🧪 Testing Scenario: Letters Stored in Blob Storage
+## Testing Scenario: Bank Letters Stored in Blob Storage
 
 In this demonstration, we're simulating a scenario at a fictional bank that processes two types of letters weekly:
 
 - **Loan Approval Letters** (e.g. confirmation of loan amounts granted)
 - **Debt Collection Letters** (e.g. follow-ups on missed payments)
 
-These letters are stored as `.docx` files in **Azure Blob Storage**, with filenames such as `Loan_Confirmation_502312665.docx` and `Debt_Collection_456055719.docx`.
+For audit and book-keeping reasons, these letters are stored as `.docx` files in **Azure Blob Storage**, with filenames such as `Loan_Confirmation_502312665.docx` and `Debt_Collection_456055719.docx`.
 
 ### 📄 Example Screenshots of the Letters
 
@@ -38,11 +38,11 @@ Each document contains a mix of structured and unstructured data, including:
 | Financial Data           | Loan amount or debt owed                           |
 | Letter Type Metadata     | Letter date, type of notice, document layout       |
 
-### 📁 Screenshot of the Files in Azure Blob Storage
+### Screenshot of the Files in Azure Blob Storage
 
-> _Insert screenshot here:_
+I have uploaded 100s of such files to Blob Storage
 
-> ![Blob Storage Screenshot](../images/blob-storage-letters.png)
+> ![Blob Storage Screenshot](../docs/images/blob_storage.png)
 
 ---
 
@@ -66,7 +66,7 @@ But this data is also highly **sensitive**.
 
 - **Azure Blob Storage** provides scalable, cost-effective file storage.
 - **Microsoft Purview Data Map** can classify these documents for:
-  - **Sensitive Information** like international bank account numbers (IBANs) or social security numbers (SSN's or in the Netherlands, where I live, BSNs/Burgerservicenummers)
+  - **Sensitive Information** like IBANs and BSNs
   - **Auto-labeling policies** to tag data with the appropriate **Sensitivity Label**
 - Sensitivity labels are then **visualized** and enforced in **Microsoft Fabric** and **Microsoft 365** environments, ensuring:
   - Compliance with internal policies and external regulations
