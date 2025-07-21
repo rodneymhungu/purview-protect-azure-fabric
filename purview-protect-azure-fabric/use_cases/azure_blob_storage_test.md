@@ -66,7 +66,7 @@ But this data is also highly **sensitive**.
 
 - **Azure Blob Storage** provides scalable, cost-effective file storage.
 - **Microsoft Purview Data Map** can classify these documents for:
-  - **Sensitive Information Types (SITs)** like IBANs or BSNs
+  - **Sensitive Information** like international bank account numbers (IBANs) or social security numbers (SSN's or in the Netherlands, where I live, BSNs/Burgerservicenummers)
   - **Auto-labeling policies** to tag data with the appropriate **Sensitivity Label**
 - Sensitivity labels are then **visualized** and enforced in **Microsoft Fabric** and **Microsoft 365** environments, ensuring:
   - Compliance with internal policies and external regulations
