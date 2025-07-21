@@ -1,8 +1,8 @@
 # Prerequisites 
 
-To test Microsoft Purview, Fabric, and Azure classification and protection features in one day, follow this checklist to ensure you have the right setup.
+To test the integration of Microsoft Purview with Fabric and Azure for data classification and protection, follow this checklist to ensure you have the right setup.
 
-## ✅Core Setup Requirements
+## Core Setup Requirements
 
 1. **Microsoft Entra ID Tenant (formerly Azure AD)**
    - You need access to a **Microsoft Entra ID tenant**, which acts as your organization’s identity and access management platform.
@@ -38,7 +38,7 @@ To test Microsoft Purview, Fabric, and Azure classification and protection featu
 
 ---
 
-## 🔐 Role & Permission Checklist
+## Role & Permission Checklist
 
 | Product Area           | Role/Permission Needed                                                                 | Description |
 |------------------------|----------------------------------------------------------------------------------------|-------------|
@@ -55,7 +55,7 @@ To test Microsoft Purview, Fabric, and Azure classification and protection featu
 
 ---
 
-## 🔄 Other Setup Steps
+## Other Setup Steps
 
 - **Access the Microsoft Purview Portal**  
   [Go to Microsoft Purview Portal](https://purview.microsoft.com)  
