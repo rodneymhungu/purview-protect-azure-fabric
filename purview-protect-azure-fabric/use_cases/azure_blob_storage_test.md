@@ -14,12 +14,12 @@ Below are two example letters used in this simulation:
 - `Loan_Confirmation_502312665.docx`  
 
 > 
-> ![Loan Confirmation Letter](../docs/images/loan-confirmation-letter.png)
+> ![Loan Confirmation Letter](../docs/images/loan_confirmation_letter.png)
 >
 > - `Debt_Collection_456055719.docx`  
-> ![Debt Collection Letter](../images/debt-collection-letter.png)
+> ![Debt Collection Letter](../docs/images/debt_collection_letter.png)
 
-You can download these files in a ZIP archive for testing:
+You can download these files in a ZIP archive for your own testing:
 
 **[⬇ Download dummy_data_azure_blob_storage.zip](https://github.com/rodneymhungu/purview-protect-azure-fabric/blob/main/purview-protect-azure-fabric/dummy-files/dummy_data_azure_blob_storage.zip)**  
 _This ZIP contains the .docx files used in the Blob Storage classification simulation._
