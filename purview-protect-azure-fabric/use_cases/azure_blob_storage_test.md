@@ -120,7 +120,7 @@ Each step represents a core action in the process:
 <details>
 <summary><strong>1. Create Labels</strong></summary>
 
-Create **Sensitivity Labels** in the Microsoft Purview Compliance Portal or Microsoft 365 Security & Compliance Center.  
+Create or **Sensitivity Labels** in the Microsoft Purview Portal.  
 Examples:
 - “Confidential – Employees Only”
 - “Highly Confidential – Financial”
