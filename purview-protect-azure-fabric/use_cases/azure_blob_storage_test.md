@@ -109,6 +109,7 @@ This ensures:
 ---
 ## 🏷️ How Sensitivity Labels Are Applied to Blob Data (5-Step Walkthrough)
 
+_Under construction 22-07-2025_
 Before we dive into the hands-on setup, here’s a simplified visual of how sensitivity labeling works with Microsoft Purview Data Map:
 
 ![Labeling process diagram](../docs/images/labeling-process-diagram.png)
