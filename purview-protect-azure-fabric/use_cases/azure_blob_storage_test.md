@@ -115,12 +115,14 @@ Before we dive into the hands-on setup, here’s a simplified visual of how sens
 
 ![Labeling process diagram](../docs/images/labeling-process-diagram.png)
 
+Reference: [How to apply labels to assets in the Microsoft Purview Data Map](https://learn.microsoft.com/en-us/purview/data-map-sensitivity-labels#how-to-apply-labels-to-assets-in-the-microsoft-purview-data-map) 
+
 Each step represents a core action in the process:
 
 <details>
-<summary><strong>1. Create Labels</strong></summary>
+<summary><strong>1. Create/Modify Labels</strong></summary>
 
-Create or **Sensitivity Labels** in the Microsoft Purview Portal.  
+Create or modify **Sensitivity Labels** in the Microsoft Purview Portal.  
 Examples:
 - “Confidential – Employees Only”
 - “Highly Confidential – Financial”
