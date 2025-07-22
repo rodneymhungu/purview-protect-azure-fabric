@@ -113,7 +113,7 @@ _Under construction 22-07-2025_
 
 Before we dive into the hands-on setup, here’s a simplified visual of how sensitivity labeling works with Microsoft Purview Data Map:
 
-![Labeling process diagram](../docs/images/labeling-process-diagram.png)
+![Labeling process diagram](../docs/images/labelling-process-diagram.png)
 
 Reference: [How to apply labels to assets in the Microsoft Purview Data Map](https://learn.microsoft.com/en-us/purview/data-map-sensitivity-labels#how-to-apply-labels-to-assets-in-the-microsoft-purview-data-map) 
 
