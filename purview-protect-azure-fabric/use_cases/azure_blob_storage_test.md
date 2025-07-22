@@ -106,4 +106,85 @@ This ensures:
 
 </details>
 
+---
+## 🏷️ How Sensitivity Labels Are Applied to Blob Data (5-Step Walkthrough)
+
+Before we dive into the hands-on setup, here’s a simplified visual of how sensitivity labeling works with Microsoft Purview Data Map:
+
+![Labeling process diagram](../docs/images/labeling-process-diagram.png)
+
+Each step represents a core action in the process:
+
+<details>
+<summary><strong>1. Create Labels</strong></summary>
+
+Create **Sensitivity Labels** in the Microsoft Purview Compliance Portal or Microsoft 365 Security & Compliance Center.  
+Examples:
+- “Confidential – Employees Only”
+- “Highly Confidential – Financial”
+
+For labels to work across Azure and Microsoft 365, make sure they are:
+- Published via a **Label Policy**
+- Set up for **Azure Information Protection (AIP)** integration
+
+🔗 [Learn more: Create and publish sensitivity labels](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels)
+</details>
+
+<details>
+<summary><strong>2. Register Asset</strong></summary>
+
+Connect your Azure Blob Storage account to Microsoft Purview Data Map.
+
+This step involves:
+- Registering the **data source** (e.g. the storage account)
+- Adding a **scan rule set** to define what Purview should look for
+
+🔗 [Register and scan Azure Blob Storage](https://learn.microsoft.com/en-us/purview/register-blob-storage)
+</details>
+
+<details>
+<summary><strong>3. Scan Asset</strong></summary>
+
+Trigger a **scan** on the registered asset. Purview will inspect the contents of your `.docx` files in Blob Storage.
+
+The scan uses:
+- **Built-in** or **custom classification rules**
+- Regex patterns and keyword dictionaries
+
+You can schedule recurring scans or run them ad hoc.
+
+🔗 [Configure and run scans](https://learn.microsoft.com/en-us/purview/create-scan)
+</details>
+
+<details>
+<summary><strong>4. Classifications Found</strong></summary>
+
+After scanning, Purview identifies **sensitive data types** such as:
+
+- BSNs (Dutch Social Security Numbers)
+- IBANs (Bank Account Numbers)
+- Passport Numbers
+
+These are visible in the **classification results** tab for each asset.
+
+🔗 [Supported classification types](https://learn.microsoft.com/en-us/purview/data-map-classification-supported-list)
+</details>
+
+<details>
+<summary><strong>5. Labels Applied</strong></summary>
+
+Based on the classification results and your auto-labeling policy:
+
+- A sensitivity label is applied **as metadata** to the Blob file or container
+- This label can later be visualized in Microsoft Fabric and honored in downstream systems
+
+The result:
+- Consistent enforcement
+- Audit trail
+- Integration into your compliance and analytics workflows
+
+🔗 [Apply labels in Data Map](https://learn.microsoft.com/en-us/purview/data-map-sensitivity-labels-apply)
+</details>
+
+
 
