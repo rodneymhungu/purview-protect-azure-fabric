@@ -1,74 +1,109 @@
-## Testing Scenario: Bank Letters Stored in Blob Storage
+# Testing Scenario: Bank Letters Stored in Blob Storage
 
-In this demonstration, we're simulating a scenario at a fictional bank that processes two types of letters weekly:
+<details>
+<summary><strong>📘 Use Case Overview</strong></summary>
 
-- **Loan Approval Letters** (e.g. confirmation of loan amounts granted)
-- **Debt Collection Letters** (e.g. follow-ups on missed payments)
+In this demonstration, we're simulating a scenario at a fictional bank that processes two types of customer letters weekly:
 
-For audit and book-keeping reasons, these letters are stored as `.docx` files in **Azure Blob Storage**, with filenames such as `Loan_Confirmation_502312665.docx` and `Debt_Collection_456055719.docx`.
+- **Loan Approval Letters** – confirming amounts granted
+- **Debt Collection Letters** – follow-ups on missed payments
 
-### 📄 Example Screenshots of the Letters
-
-Below are two example letters used in this simulation:
+For audit and recordkeeping purposes, these letters are stored as `.docx` files in **Azure Blob Storage**, using filenames like:
 
 - `Loan_Confirmation_502312665.docx`  
+- `Debt_Collection_456055719.docx`
 
-> 
-> ![Loan Confirmation Letter](../docs/images/loan_confirmation_letter.png)
->
-> - `Debt_Collection_456055719.docx`  
-> ![Debt Collection Letter](../docs/images/debt_collection_letter.png)
+100s/1000s/millions of the files stored together amount to [**unstructured data**](https://en.wikipedia.org/wiki/Unstructured_data) in Azure, making them ideal candidates for classification using **Microsoft Purview Data Map**. 
 
-You can download these files in a ZIP archive for your own testing:
+</details>
+
+<details>
+<summary><strong>📎 Download the Sample Files</strong></summary>
+
+You can download the sample files used in this scenario:
 
 **[⬇ Download dummy_data_azure_blob_storage.zip](https://github.com/rodneymhungu/purview-protect-azure-fabric/blob/main/purview-protect-azure-fabric/dummy-files/dummy_data_azure_blob_storage.zip)**  
-_This ZIP contains the .docx files used in the Blob Storage classification simulation._
+_This ZIP contains the `.docx` files used in this Blob Storage classification simulation._
 
----
+</details>
 
-### 🔍 What’s Inside These Files
+<details>
+<summary><strong>🖼️ Example Letter Screenshots</strong></summary>
 
-Each document contains a mix of structured and unstructured data, including:
+These are the sample documents:
+
+- **Loan Confirmation Letter**  
+  ![Loan Confirmation Letter](../docs/images/loan_confirmation_letter.png)
+
+- **Debt Collection Letter**  
+  ![Debt Collection Letter](../docs/images/debt_collection_letter.png)
+
+</details>
+
+<details>
+<summary><strong>📂 Example Storage Layout</strong></summary>
+
+The files are uploaded into an Azure Blob Storage container. Example view:
+
+![Blob Storage Screenshot](../docs/images/blob_storage.png)
+
+</details>
+
+<details>
+<summary><strong>🔍 What’s Inside These Files</strong></summary>
+
+Each `.docx` file contains a mix of business and sensitive data:
 
 | **Data Type**            | **Example**                                        |
 |--------------------------|----------------------------------------------------|
-| Recipient Information    | Name, full residential address                     |
-| Account Identifiers      | Bank account numbers (IBAN), relationship/reference numbers |
+| Recipient Information    | Full name, home address                            |
+| Account Identifiers      | IBANs, relationship or reference numbers           |
 | Sensitive Identifiers    | BSN (Dutch Social Security Number), passport number |
-| Financial Data           | Loan amount or debt owed                           |
-| Letter Type Metadata     | Letter date, type of notice, document layout       |
+| Financial Data           | Loan amount, debt owed                             |
+| Letter Type Metadata     | Letter date, document layout, letter type          |
 
-### Screenshot of the Files in Azure Blob Storage
+</details>
 
-I have uploaded 100s of such files to Blob Storage
+<details>
+<summary><strong>🎯 Why This Data Matters</strong></summary>
 
-> ![Blob Storage Screenshot](../docs/images/blob_storage.png)
+From an analytics standpoint, this data offers value:
 
----
+- Correlating **loan sizes** to **postal codes**
+- Tracking **collection rates** over time
+- Understanding customer behavior through text patterns
 
-### Why This Matters
+However, it also contains **regulated** and **personal** data:
 
-This information is potentially useful for **analytics**. For example:
+- IBANs and BSNs must be handled per GDPR and internal policies
+- Analysts typically require **aggregated** results, not identifiers
+- Unprotected access risks **data leakage**
 
-- Correlating **loan sizes** to **geographic location**
-- Analyzing **debt trends** across customer groups
-- Building data pipelines for Power BI or Microsoft Fabric reporting
+This balance between usability and privacy makes it a prime candidate for classification and sensitivity labeling.
 
-But this data is also highly **sensitive**.
+</details>
 
-- Bank account details and BSNs are considered regulated data.
-- Internal analysts may only need **aggregate insights**, not personal identifiers.
-- External users and unauthorized internal roles **must not access** these files unprotected.
+<details>
+<summary><strong>🔐 Why Use Purview for Blob Classification</strong></summary>
 
----
+With **Microsoft Purview**, you can:
 
-### Why Use Blob Storage + Microsoft Purview
+- **Classify files in Blob Storage** by scanning for patterns like:
+  - IBANs
+  - BSNs
+  - Passport numbers
+- Automatically **apply sensitivity labels** like:
+  - “Confidential – Employees Only”
+  - “Highly Confidential – Financial”
+- Feed this metadata into:
+  - **Microsoft Fabric** for secure analytics
+  - **Microsoft 365** for labeling consistency when analytics is used in workplace tools like Excel and Powerpoint to communicate to broader audiences
 
-- **Azure Blob Storage** provides scalable, cost-effective file storage.
-- **Microsoft Purview Data Map** can classify these documents for:
-  - **Sensitive Information** like IBANs and BSNs
-  - **Auto-labeling policies** to tag data with the appropriate **Sensitivity Label**
-- Sensitivity labels are then **visualized** and enforced in **Microsoft Fabric** and **Microsoft 365** environments, ensuring:
-  - Compliance with internal policies and external regulations
-  - Safe analytics, sharing, and reporting based on label-based access
+This ensures:
+- Consistent policy enforcement
+- Audit readiness
+- Access control and protection across services
+
+</details>
+
 
