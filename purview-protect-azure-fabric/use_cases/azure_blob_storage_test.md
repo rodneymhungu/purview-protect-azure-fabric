@@ -43,7 +43,7 @@ These are the sample documents:
 <details>
 <summary><strong>📂 Example Storage Layout</strong></summary>
 
-The files are uploaded into an Azure Blob Storage container. Example view:
+The files are uploaded into an [Azure Blob Storage](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blobs-introduction) container. Example view:
 
 ![Blob Storage Screenshot](../docs/images/blob_storage.png)
 
