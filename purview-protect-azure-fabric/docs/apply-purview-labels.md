@@ -131,11 +131,13 @@ Summarize all settings before clicking **Save label**.
 If more than one label can apply to an item, the highest-priority label will be enforced.  
 Return to the Sensitivity Labels overview and click **Reorder** to adjust priorities.
 
+🔗 [Learn more: Create and publish sensitivity labels](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels)
+
 </details>
 
 
 
-🔗 [Learn more: Create and publish sensitivity labels](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels)
+
 </details>
 
 <details>
