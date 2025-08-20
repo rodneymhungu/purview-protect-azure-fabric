@@ -143,7 +143,7 @@ Return to the Sensitivity Labels overview and click **Reorder** to adjust priori
 <details>
 <summary><strong>2. Register Asset</strong></summary>
 
-Connect your Azure Blob Storage account to Microsoft Purview Data Map.
+Connect your data asset to Microsoft Purview Data Map.
 
 This step involves:
 - Registering the **data source** (e.g. the storage account)
