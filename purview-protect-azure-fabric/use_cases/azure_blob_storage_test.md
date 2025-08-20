@@ -120,16 +120,129 @@ Reference: [How to apply labels to assets in the Microsoft Purview Data Map](htt
 Each step represents a core action in the process:
 
 <details>
-<summary><strong>1. Create/Modify Labels</strong></summary>
+<summary><strong>1. Create or Modify a Label</strong></summary>
 
-Create or modify **Sensitivity Labels** in the Microsoft Purview Portal.  
+If you already have an existing sensitivity label taxonomy, you can jump right into modifying one. Otherwise, create a new label from scratch using Microsoft Purview’s built-in wizard.
+
 Examples:
 - “Confidential – Employees Only”
 - “Highly Confidential – Financial”
 
 For labels to work across Azure and Microsoft 365, make sure they are:
 - Published via a **Label Policy**
-- Set up for **Azure Information Protection (AIP)** integration
+
+---
+
+### (a) Go to the Sensitivity Labels menu
+
+Open the Microsoft Purview portal → scroll to the **Data Security** section → click on **Information Protection**.
+
+📸 Screenshot: Microsoft Purview homepage → Information Protection section  
+![Microsoft Purview portal](../docs/images/1.%20microsoft-purview-portal.png)
+
+📸 Screenshot: Data Security section with Information Protection card  
+![Data Security card](../docs/images/2.%20Data%20Security%20Section%20of%20Purview%20Portal.png)
+
+If you don’t see the card, click **View all solutions**.  
+If the menu is completely missing, you may not have the right permissions. [Check Microsoft Docs](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels#permissions)
+
+---
+
+### (b) Create or Edit a Sensitivity Label
+
+- To **create** a new label → click **+ Create a label**
+- To **edit** an existing one → click the **...** next to the label name and choose **Edit**
+
+📸 Screenshot: "Create label" wizard entry point  
+![Create label](../docs/images/3.%20Create%20a%20label%20information%20protection.png)
+
+📸 Screenshot: Context menu with edit option  
+![Edit label option](../docs/images/4.%20edit%20label.png)
+
+---
+
+### (c) Define Basic Label Details
+
+Enter:
+
+- **Name** (internal)
+- **Display name** (user-facing)
+- **Description for users**
+- (Optional) Color, priority, or admin notes
+
+📸 Screenshot: Basic label metadata form  
+![Label details](../docs/images/5.%20provide%20basic%20details%20of%20label.png)
+
+---
+
+### (d) Set the Scope
+
+Enable **Files & other data assets** to ensure this label applies to Azure and Microsoft Fabric.
+
+📸 Screenshot: Scope selection interface  
+![Label scope](../docs/images/6.%20define%20the%20scope%20for%20this%20label%20-%20files%20&%20other%20data%20assets.png)
+
+---
+
+### (e) Configure File-Level Access Controls
+
+Control who can open files with this label. Options include:
+
+- Encryption
+- User/group-based permissions
+- Expiration dates
+- Offline access controls
+
+📸 Screenshot: Access control settings  
+![Access control settings](../docs/images/7.%20control%20who%20has%20access%20to%20these%20files.png)
+
+📸 Screenshot: Assigning permissions  
+![Assign permissions](../docs/images/8.%20assign%20the%20permissions%20immedialy%20when%20labelling%20the%20assets%20and%20items.png)
+
+---
+
+### (f) Configure Protection for Groups & Sites (Optional)
+
+If you selected **Groups & sites** in your scope, set:
+
+- Privacy: Public or private
+- Sharing: Internal vs external user access
+- Meeting/Team settings
+
+📸 Screenshot: Groups & Sites settings  
+![Groups & sites settings](../docs/images/9.%20Define%20protection%20settings%20for%20groups%20and%20sites%20-%20relevant%20when%20items%20get%20ingested%20into%20an%20excel%20spreadsheet.png)
+
+📸 Screenshot: External user access controls  
+![External user access](../docs/images/10.%20external%20user%20access.png)
+
+---
+
+### (g) External Sharing & Conditional Access (Optional)
+
+Use **Microsoft Entra Conditional Access** to control external or unmanaged device access to SharePoint or Teams sites labeled with this label.
+
+📸 Screenshot: Conditional Access configuration  
+![Conditional access](../docs/images/11.%20external%20sharing%20and%20conditional%20access%20setting.png)
+
+---
+
+### (h) Review and Save
+
+Summarize all settings before clicking **Save label**.
+
+📸 Screenshot: Final label review screen  
+![Review and save label](../docs/images/12.%20reviewing%20your%20settings.png)
+
+---
+
+### 🧠 Quick Tip: Label Priority Matters
+
+If more than one label can apply to an item, the highest-priority label will be enforced.  
+Return to the Sensitivity Labels overview and click **Reorder** to adjust priorities.
+
+</details>
+
+
 
 🔗 [Learn more: Create and publish sensitivity labels](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels)
 </details>
