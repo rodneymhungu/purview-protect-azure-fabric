@@ -178,21 +178,52 @@ After scanning, Purview identifies **sensitive data types** such as:
 These are visible in the **classification results** tab for each asset.
 
 🔗 [Supported classification types](https://learn.microsoft.com/en-us/purview/data-map-classification-supported-list)
+
+</details>
+
+<details>
+<summary><strong>4.5 Create Auto-Labeling Policy</strong></summary>
+
+To ensure that labels are **automatically applied** based on classification results, you must configure an **auto-labeling policy** for your non-Microsoft 365 assets like Azure Blob Storage or Azure SQL.
+
+This step bridges your classification findings with actionable protection.
+
+#### Steps:
+
+1. Open the **Microsoft Purview portal** and go to:  
+   `Data Security → Information Protection → Auto-labeling`
+2. Select **+ Create auto-labeling policy**
+3. Choose **non-Microsoft 365 locations**
+4. Define your **scope**:  
+   - Apply to **all assets**, or  
+   - Select specific containers or storage accounts
+5. Choose the **sensitivity label** to apply  
+   _(It must be scoped to "Files & other data assets")_
+6. Add **classification conditions** to trigger the label  
+   _(e.g., IBAN, BSN, passport number)_
+7. Review and **publish the policy**
+
+📘 [How to create auto-labeling policy](https://learn.microsoft.com/en-us/purview/data-map-sensitivity-labels-apply#step-3-create-an-auto-labeling-policy)
+
+🧠 **Note:** Labeling will occur during the **next scan** of assets that match this policy.
 </details>
 
 <details>
 <summary><strong>5. Labels Applied</strong></summary>
 
-Based on the classification results and your auto-labeling policy:
+Once your **auto-labeling policy** is in place and you re-scan your assets:
 
-- A sensitivity label is applied **as metadata** to the Blob file or container
-- This label can later be visualized in Microsoft Fabric and honored in downstream systems
+- A sensitivity label is applied **as metadata** to the asset (file, blob, or container)
+- The label is visible inside the Microsoft Purview portal
+- It is also **enforced** and **respected** in downstream tools like **Microsoft Fabric**
 
-The result:
-- Consistent enforcement
-- Audit trail
-- Integration into your compliance and analytics workflows
+This gives you:
 
-🔗 [Apply labels in Data Map](https://learn.microsoft.com/en-us/purview/data-map-sensitivity-labels-apply)
+- ✅ Consistent classification-to-label enforcement
+- 🧾 An audit trail for sensitive data
+- 🧩 Integration into analytics, compliance, and access control workflows
+
+📘 [Apply labels in Data Map](https://learn.microsoft.com/en-us/purview/data-map-sensitivity-labels-apply)
+
 </details>
 
