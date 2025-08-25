@@ -10,7 +10,7 @@ You’ll find:
 - 🔐 **Permission guides** that outline the exact roles and licenses needed to use this functioanlity
 - 🗂️ **Use case scenarios** that show how data protection applies to real-world business cases (e.g. financial document processing)
 
-This repo is for **data security engineers/consultatants**, **compliance leads**, and **data governance professionals** looking to explore **role-aware**, **scalable**, and **practical** approaches to Purview data security deployment in Azure.
+This repo is for **data security engineers/consultatants**, **compliance leads**, and **data governance professionals** looking to explore **role-aware**, **scalable**, and **practical** approaches to Purview data security deployment in Azure and Fabric.
 
 ---
 
