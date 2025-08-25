@@ -29,10 +29,10 @@ This repo is for **data security engineers/consultatants**, **compliance leads**
 
 I recommend reading the docs:
 
-1. [Getting Started for Non-Experts](docs/getting-started-non-experts.md)  
-2. [Check the Prerequisites](docs/prerequisites.md)  
-3. [How sensitive data gets classified in Microsoft 365 compared to in Azure](docs/classification-engines.md)
-4. [How to use use apply Sensitivity Labels in Azure](docs/apply-purview-labels.md)
+1. [Getting Started for Non-Experts](purview-protect-azure-fabric/docs/getting-started-for-non-experts.md)  
+2. [Check the Prerequisites](purview-protect-azure-fabric/docs/Prerequisites.md)  
+3. [How sensitive data gets classified in Microsoft 365 compared to in Azure](purview-protect-azure-fabric/docs/classification-engines.md)
+4. [How to apply Sensitivity Labels in Azure - to enforce uniform data protection standards across SaaS, PaaS and Iaas data sources](purview-protect-azure-fabric/docs/apply-purview-labels.md)
 
 ---
 
