@@ -3,10 +3,7 @@
 This repository is a companion explainer and field guide for the
 [Microsoft Data and Agent Governance and Security Accelerator](https://github.com/microsoft/Data-and-Agent-Governance-and-Security-Accelerator).
 
-It is not a competing implementation. The accelerator owns the
-automation. This repo helps the reader understand what the accelerator
-does, why each control matters, and how the pieces of Microsoft Purview
-fit together when you protect data and AI workloads in Azure and
+The accelerator owns the automation & implementation scripts. This repo helps the reader understand what the accelerator does, why each control matters, and how the pieces of Microsoft Purview fit together when you protect data and AI workloads in Azure and
 Microsoft Fabric.
 
 ## Audience
@@ -16,12 +13,13 @@ Microsoft Fabric.
 - Microsoft partners working with regulated customers
 - Microsoft technical specialists who need a shareable, plain-English
   reference
+- Developers or DevOps professionals working with the diverse roles listed above
 
 ## The problem in plain terms
 
 Organisations are being asked to govern AI, Fabric and Azure data with
 the same rigour they already apply to Microsoft 365. The control surface
-is wide. The portals are many. The licensing is uneven. Most teams need
+is wide. The portals are many. The licensing is complex. Most teams need
 a single, calm reference that explains:
 
 - which Purview capability covers which risk
@@ -61,7 +59,7 @@ Then read:
 3. [Classification engines: Data Map vs Sensitive Information Types](purview-protect-azure-fabric/docs/classification-engines.md)
 4. [Applying sensitivity labels in Azure](purview-protect-azure-fabric/docs/apply-purview-labels.md)
 
-The companion documents in this pivot are:
+The companion document are:
 
 - [Accelerator companion guide](docs/accelerator-companion-guide.md)
 - [What's new in Purview](docs/whats-new-in-purview.md)
