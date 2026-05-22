@@ -1,59 +1,82 @@
-# Purview: Protecting Data in Azure & Microsoft Fabric
+# Purview Protect: Azure and Fabric Companion Guide
 
-## 🧭 Overview
+This repository is a companion explainer and field guide for the
+[Microsoft Data and Agent Governance and Security Accelerator](https://github.com/microsoft/Data-and-Agent-Governance-and-Security-Accelerator).
 
-This repo demonstrates how to **protect and govern data** across **Azure** and **Microsoft Fabric** using **Microsoft Purview**. It includes tested examples, walkthroughs, and resources designed for hands-on use.
+It is not a competing implementation. The accelerator owns the
+automation. This repo helps the reader understand what the accelerator
+does, why each control matters, and how the pieces of Microsoft Purview
+fit together when you protect data and AI workloads in Azure and
+Microsoft Fabric.
 
-You’ll find:
+## Audience
 
-- 🧪 **Tested demos** that apply sensitivity labels to Azure data sources and visualize label metadata in Microsoft Fabric
-- 🔐 **Permission guides** that outline the exact roles and licenses needed to use this functioanlity
-- 🗂️ **Use case scenarios** that show how data protection applies to real-world business cases (e.g. financial document processing)
+- Security architects
+- Data governance and compliance leads
+- Microsoft partners working with regulated customers
+- Microsoft technical specialists who need a shareable, plain-English
+  reference
 
-This repo is for **data security engineers/consultatants**, **compliance leads**, and **data governance professionals** looking to explore **role-aware**, **scalable**, and **practical** approaches to Purview data security deployment in Azure and Fabric.
+## The problem in plain terms
 
----
+Organisations are being asked to govern AI, Fabric and Azure data with
+the same rigour they already apply to Microsoft 365. The control surface
+is wide. The portals are many. The licensing is uneven. Most teams need
+a single, calm reference that explains:
 
-## 📁 What's Inside
+- which Purview capability covers which risk
+- where the accelerator fits in the deployment story
+- what the operating model looks like after deployment
 
-| Folder | Description |
-|--------|-------------|
-| `docs/` | Core concepts, walkthroughs, and prerequisites for classification, labelling and protection with the Microsoft Purview|
-| `use_cases/` | Hypothetical scenarios to develop business cases behind your tests |
-| `dummy-files/` | Sample files for demo environments, including financial documents I have used in classification and labelling tests |
-| `scripts/` (coming soon - after gaining initial feedback) | Optional automation and CLI examples |
+This repo aims to be that reference.
 
----
+## Purview surface area covered
 
-## 🚀 Where to Start
+The companion guide focuses on the Purview capabilities that the
+accelerator touches or that are directly relevant to its scope:
 
-I recommend reading the docs:
+- Information Protection and sensitivity labels
+- Data Loss Prevention (DLP)
+- Data Security Posture Management (DSPM) and DSPM for AI
+- Microsoft Defender for Cloud and Defender for AI workloads
+- Audit and evidence export
+- Fabric and OneLake label propagation
 
-1. [Getting Started for Non-Experts](purview-protect-azure-fabric/docs/getting-started-for-non-experts.md)  
-2. [Check the Prerequisites](purview-protect-azure-fabric/docs/Prerequisites.md)  
-3. [How sensitive data gets classified in Microsoft 365 compared to in Azure](purview-protect-azure-fabric/docs/classification-engines.md)
-4. [How to apply Sensitivity Labels in Azure - to enforce uniform data protection standards across SaaS, PaaS and Iaas data sources](purview-protect-azure-fabric/docs/apply-purview-labels.md)
+Primary references:
 
----
+- [Microsoft Purview documentation](https://learn.microsoft.com/en-us/purview/)
+- [What's new in Microsoft Purview](https://learn.microsoft.com/en-us/purview/whats-new)
+- [Data and Agent Governance and Security Accelerator](https://github.com/microsoft/Data-and-Agent-Governance-and-Security-Accelerator)
 
-## 🚦Work in Progress
+## How to use this repo
 
-This project is actively evolving. Expect new updates including:
+Start with the [Quick start](docs/quick-start.md). It explains the
+recommended reading path and when to switch over to the accelerator
+repository for actual deployment work.
 
-- 🧱 Structured tutorials for classifying and protecting data Azure services (e.g. Azure SQL, ADLS Gen2)
-- 🧩 Fabric-focused data security demos 
+Then read:
 
-> Want to contribute or reuse these demos? Start by reading [`docs/prerequisites.md`](docs/prerequisites.md).
+1. [Getting started for non-experts](purview-protect-azure-fabric/docs/getting-started-for-non-experts.md)
+2. [Prerequisites](purview-protect-azure-fabric/docs/Prerequisites.md)
+3. [Classification engines: Data Map vs Sensitive Information Types](purview-protect-azure-fabric/docs/classification-engines.md)
+4. [Applying sensitivity labels in Azure](purview-protect-azure-fabric/docs/apply-purview-labels.md)
 
----
+The companion documents in this pivot are:
 
-## 📬 Stay Updated
+- [Accelerator companion guide](docs/accelerator-companion-guide.md)
+- [What's new in Purview](docs/whats-new-in-purview.md)
+- [Roadmap](docs/roadmap.md)
+- [Contributing](docs/contributing.md)
 
-You can follow updates via [LinkedIn](https://www.linkedin.com/in/rodneymhungu/) or my blog at [rodneymhungu.com](https://rodneymhungu.com).
+## Status
 
----
+This is a pre-parental-leave first version. It is intentionally modest.
+Some sections carry TODO markers where a claim still needs to be
+validated against the accelerator running in a real tenant.
 
-## 🤝 Built for Real-World Collaboration
+Feedback, issues, forks and pull requests are explicitly welcome. See
+[Contributing](docs/contributing.md).
 
-Most Microsoft Purview documentation is product-oriented. This repo focuses on the **intersection of roles** — where **data engineers**, **security architects**, **compliance teams**, and **Power BI professionals** need to align. That's where governance breaks down — and where this repo helps connect the dots.
+## Licence
 
+See [LICENSE](LICENSE).
