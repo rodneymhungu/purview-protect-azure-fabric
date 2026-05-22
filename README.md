@@ -59,7 +59,7 @@ Then read:
 3. [Classification engines: Data Map vs Sensitive Information Types](purview-protect-azure-fabric/docs/classification-engines.md)
 4. [Applying sensitivity labels in Azure](purview-protect-azure-fabric/docs/apply-purview-labels.md)
 
-The companion document are:
+The companion documents are:
 
 - [Accelerator companion guide](docs/accelerator-companion-guide.md)
 - [What's new in Purview](docs/whats-new-in-purview.md)
