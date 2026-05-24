@@ -96,21 +96,36 @@ in a demo tenant.
 
 ## Permissions required, at a high level
 
-The accelerator touches several control planes, so the operator needs
-permissions across all of them.
+The accelerator touches several control planes: Azure, Microsoft Defender for Cloud, Microsoft Purview, Microsoft 365, Microsoft Entra ID, Exchange Online and Microsoft Fabric. The accelerator's [Deployment Guide](https://github.com/microsoft/Data-and-Agent-Governance-and-Security-Accelerator/blob/main/docs/DeploymentGuide.md) is the primary source for deployment permissions. This section reorganises those requirements by control plane and links to the right official reference, so you can validate or assign each one without leaving the repo.
 
-- Azure: subscription-level access with rights to create resources in
-  the target resource group, plus Defender for Cloud settings access.
-- Purview: account administrator rights for DSPM configuration.
-- Microsoft 365: compliance and sensitivity label management rights if
-  the `m365` tag is in scope. Some steps require MFA and therefore
-  desktop PowerShell 7.
-- Microsoft Entra ID: rights to register or use the identities the
-  accelerator relies on.
+For the broader tenant, Azure and Fabric setup checklist, see [Prerequisites](../purview-protect-azure-fabric/docs/Prerequisites.md) in this repo.
 
-TODO: Replace the high-level list with a precise role-by-role list once
-validated. Many of the underlying roles are documented in
-[Prerequisites](../purview-protect-azure-fabric/docs/Prerequisites.md).
+| Control plane | Why it matters | Permission or access to validate | Where to check first |
+| --- | --- | --- | --- |
+| Azure | Creating and configuring the accelerator's Azure resources. | Rights to create resources in the target subscription or resource group, plus role assignment rights if needed. | [Azure built-in roles](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles) |
+| Microsoft Defender for Cloud | Defender plans and Cloud settings the accelerator configures. | Permission to configure Defender for Cloud settings for the in-scope subscription. | [User roles and permissions in Microsoft Defender for Cloud](https://learn.microsoft.com/en-us/azure/defender-for-cloud/permissions) |
+| Microsoft Purview | DSPM onboarding, data source registration and policy configuration. | Membership of the relevant Purview role groups, including those needed for DSPM for AI and Data Source Administrator. | [Permissions in the Microsoft Purview portal](https://learn.microsoft.com/en-us/purview/purview-permissions) |
+| Sensitivity labels | Publishing and applying labels, including labels used on Fabric items. | Permission to create, publish and manage sensitivity labels and their policies. | [Get started with sensitivity labels](https://learn.microsoft.com/en-us/purview/get-started-with-sensitivity-labels) |
+| Microsoft 365 (the `m365` tag) | Unified Audit, DLP and other Microsoft 365 compliance features. | A Microsoft 365 E5 or E5 Compliance licence and Compliance Administrator rights. | [Microsoft Purview](https://learn.microsoft.com/en-us/purview/) documentation. Verify the exact role group for each compliance feature. |
+| Exchange Online (the `m365` tag) | Steps that connect to Exchange Online and Security and Compliance PowerShell. | Exchange Online admin access with MFA, run from a desktop session. | [Permissions in Exchange Online](https://learn.microsoft.com/en-us/exchange/permissions-exo/permissions-exo) |
+| Microsoft Entra ID | Identities the accelerator depends on, including users, service principals and managed identities. | Rights to register apps, manage service principals or managed identities, and assign Entra roles where required. | [Microsoft Entra built-in roles](https://learn.microsoft.com/en-us/entra/identity/role-based-access-control/permissions-reference) |
+| Microsoft Fabric | Label inheritance into Fabric items and any workspace settings that affect labelled content. | Fabric admin rights at the tenant level for label inheritance, plus workspace admin or member rights where labels are applied. | [Microsoft Fabric governance](https://learn.microsoft.com/en-us/fabric/governance/) documentation. Verify the exact admin role for label inheritance. |
+
+**Key interdependencies**
+
+- Azure RBAC and Microsoft Entra roles are separate permission systems and should not be treated as interchangeable. Azure RBAC governs access to Azure resources. Entra roles govern identity and directory administration.
+- The `m365` tag pulls in Microsoft 365 licensing (E5 or E5 Compliance), Compliance Administrator rights and Exchange Online admin access with MFA.
+- Fabric labelling depends on tenant and workspace prerequisites that the accelerator scripts do not configure. Confirm sensitivity label support is enabled at the Fabric tenant level and that the right workspace roles are in place.
+- Some Microsoft 365 steps require interactive authentication, so desktop PowerShell 7 may be needed rather than headless automation.
+
+**When in doubt**
+
+Validate in this order:
+
+1. The accelerator's [Deployment Guide](https://github.com/microsoft/Data-and-Agent-Governance-and-Security-Accelerator/blob/main/docs/DeploymentGuide.md).
+2. This repo's [Prerequisites](../purview-protect-azure-fabric/docs/Prerequisites.md) page.
+3. The relevant Microsoft Learn role documentation linked above.
+4. [RBACMap](https://rbacmap.com), for visual orientation only.
 
 ## Cost drivers, at a high level
 
