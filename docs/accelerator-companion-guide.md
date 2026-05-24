@@ -116,7 +116,7 @@ For the broader tenant, Azure and Fabric setup checklist, see [Prerequisites](..
 - Azure RBAC and Microsoft Entra roles are separate permission systems and should not be treated as interchangeable. Azure RBAC governs access to Azure resources. Entra roles govern identity and directory administration.
 - The `m365` tag pulls in Microsoft 365 licensing (E5 or E5 Compliance), Compliance Administrator rights and Exchange Online admin access with MFA.
 - Fabric labelling depends on tenant and workspace prerequisites that the accelerator scripts do not configure. Confirm sensitivity label support is enabled at the Fabric tenant level and that the right workspace roles are in place.
-- Some Microsoft 365 steps require interactive authentication, so desktop PowerShell 7 may be needed rather than headless automation.
+- Steps related to Microsoft 365 may require interactive authentication to Exchange Online and Security & Compliance PowerShell. For that path, run PowerShell 7 from a desktop workstation that can complete browser-based MFA, unless you have deliberately configured app-only authentication for unattended automation.
 
 **When in doubt**
 
